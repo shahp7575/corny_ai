@@ -3,7 +3,7 @@ import streamlit as st
 from streamlit_lottie import st_lottie
 from lottie import lottie_book
 
-sys.path.insert(0, 'corny_ai/')
+sys.path.insert(0, '../corny_ai/')
 from corny_ai import get_corny, header
 
 st.set_page_config(layout='centered', page_title='Corny AI')
