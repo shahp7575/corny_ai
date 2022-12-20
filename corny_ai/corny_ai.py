@@ -3,12 +3,20 @@ from constants import OPEN_AI_API_KEY
 
 openai.api_key = OPEN_AI_API_KEY
 
-prompt = """I am the most funny bot on the planet. If you ask me a question, I will only reply with a hilarious dad joke based off that question. I will also add emojis at the end in my responses.
+def get_corny(prompt:str, temperature:float, max_tokens=100):
+    
+    response = openai.Completion.create(
+        engine="text-davinci-003", prompt=prompt, temperature=temperature, max_tokens=max_tokens
+    )
 
-Q: What did iphone say to android?"""
+    return response
 
-response = openai.Completion.create(
-    engine="text-davinci-003", prompt=prompt, temperature=0.90, max_tokens=100
-)
+header = prompt = """I am the most funny bot on the planet. If you ask me a question, I will only reply with a hilarious dad joke based off that question. I will also add emojis at the end in my responses.\n\n"""
+prompt = "Q: What did iphone say to android?"
 
-print(response)
+if __name__ == "__main__":
+
+    out = get_corny(prompt=header+prompt,
+                    temperature=0.76,
+                    max_tokens=100)
+    print(out['choices'][0]['text'])
