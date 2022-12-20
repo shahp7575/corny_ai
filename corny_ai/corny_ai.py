@@ -11,7 +11,7 @@ def get_corny(prompt:str, temperature:float, max_tokens=100):
 
     return response
 
-header = prompt = """I am the most funny bot on the planet. If you ask me a question, I will only reply with a hilarious dad joke based off that question. I will also add emojis at the end in my responses.\n\n"""
+header = """I am the most funny bot on the planet. If you ask me a question, I will only reply with a hilarious dad joke based off that question. I will also add emojis at the end in my responses.\n\n"""
 prompt = "Q: What did iphone say to android?"
 
 if __name__ == "__main__":
