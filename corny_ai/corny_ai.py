@@ -1,7 +1,8 @@
 import openai
+import streamlit as st
 from constants import OPEN_AI_API_KEY
 
-openai.api_key = OPEN_AI_API_KEY
+openai.api_key = st.secrets['OPEN_AI_API_KEY']
 
 def get_corny(prompt:str, temperature:float, max_tokens=100):
     
