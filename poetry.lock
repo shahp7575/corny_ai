@@ -929,6 +929,21 @@ watchdog = {version = "*", markers = "platform_system != \"Darwin\""}
 snowflake = ["snowflake-snowpark-python"]
 
 [[package]]
+name = "streamlit-lottie"
+version = "0.0.3"
+description = "A Streamlit custom component to load Lottie animations"
+category = "main"
+optional = false
+python-versions = ">=3.6"
+files = [
+    {file = "streamlit-lottie-0.0.3.tar.gz", hash = "sha256:c1b65e2b56c51db7f911c727b16e8f1e27591594294f0ac06333978984cade83"},
+    {file = "streamlit_lottie-0.0.3-py3-none-any.whl", hash = "sha256:b6ab8171d4423cdd14630dcae237fc339b998264dd57ff8810705e01d03f5c33"},
+]
+
+[package.dependencies]
+streamlit = ">=0.63"
+
+[[package]]
 name = "toml"
 version = "0.10.2"
 description = "Python Library for Tom's Obvious, Minimal Language"
@@ -1133,4 +1148,4 @@ testing = ["flake8 (<5)", "func-timeout", "jaraco.functools", "jaraco.itertools"
 [metadata]
 lock-version = "2.0"
 python-versions = ">=3.7.1, <3.9.7"
-content-hash = "f95854f7b8ee0967f13559b53730f77adf74a099bbff0db8a8180e54e49671ce"
+content-hash = "fb446062f3b6d3dde1cd7ab3c98b5435589460c3292d75560a7900868c0c93d3"
